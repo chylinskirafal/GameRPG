@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bb83fb8-0748-43e0-8e00-daf510794bfa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/map1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/map/world01.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" afterDir="false" />
     </list>
@@ -43,6 +46,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "F:/MusicBot/GameRPG-dd2289c814444bc16dc2d218e3b27fd4fb83412d",
     "node.js.detected.package.eslint": "true",
@@ -110,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718960409693</updated>
       <workItem from="1718960410770" duration="12489000" />
-      <workItem from="1718973511406" duration="6902000" />
+      <workItem from="1718973511406" duration="8599000" />
     </task>
     <servers />
   </component>

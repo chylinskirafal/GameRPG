@@ -11,6 +11,12 @@ public class GamePanel extends JPanel implements Runnable {
     final int scale = 3;
     public final int tileSize = originalTileSize * scale; // 48x48 tile
 
+    //Ustawienia świata gry
+    public final int maxWorldCol = 50;
+    public final int maxWorldRow = 50;
+    public final int worldWidth = maxWorldCol * tileSize;
+    public final int worldHeight = maxWorldRow * tileSize;
+
     //FPS
     final int FPS = 60;
 
@@ -24,7 +30,7 @@ public class GamePanel extends JPanel implements Runnable {
     Thread gameThread;
 
     TileManager tileManager = new TileManager(this);
-    Player player = new Player(this, keyH);
+    public Player player = new Player(this, keyH);
 
 
     public GamePanel() {
@@ -83,13 +89,13 @@ public class GamePanel extends JPanel implements Runnable {
     //zmiana współrzędnych bohatera użytkownika
     public void update() {
         if(keyH.upPressed == true) {
-            player.y -= player.speed;
+            player.worldY -= player.speed;
         } else if(keyH.downPressed == true) {
-            player.y += player.speed;
+            player.worldY += player.speed;
         } else if(keyH.leftPressed == true) {
-            player.x -= player.speed;
+            player.worldX -= player.speed;
         } else if(keyH.rightPressed == true) {
-            player.x += player.speed;
+            player.worldX += player.speed;
         }
         player.update();
     }
