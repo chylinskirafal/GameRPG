@@ -1,6 +1,7 @@
 package pl.chylu;
 
 import entity.Player;
+import tiles.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,6 +10,8 @@ public class GamePanel extends JPanel implements Runnable {
     final int originalTileSize = 16; // Modele będą mieć 16x16
     final int scale = 3;
     public final int tileSize = originalTileSize * scale; // 48x48 tile
+
+    //FPS
     final int FPS = 60;
 
     //rozmiar ilości "pikseli"
@@ -19,6 +22,8 @@ public class GamePanel extends JPanel implements Runnable {
 
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
+
+    TileManager tileManager = new TileManager(this);
     Player player = new Player(this, keyH);
 
 
@@ -38,7 +43,8 @@ public class GamePanel extends JPanel implements Runnable {
 
     @Override
     public void run() {
-        double drawInterval = 1000000000 / FPS; // 0.016(6) sekund odświeżania
+        //Liczenie czasu odświeżania - docelowo 0.016(6) sec / 1/60 sekundy odświeżania
+        double drawInterval = 1000000000 / FPS;
         double delta = 0;
         long lastTime = System.nanoTime();
         long currentTime;
@@ -64,7 +70,7 @@ public class GamePanel extends JPanel implements Runnable {
                 drawCount++;
             }
 
-            //TODO przekształcić to w licznik w rogu
+            //TODO przekształcić licznik FPS konsoli do rogu aplikacji
             if (timer >= 1000000000) {
                 System.out.println("FPS: " + drawCount);
                 drawCount = 0;
@@ -74,6 +80,7 @@ public class GamePanel extends JPanel implements Runnable {
         }
     }
 
+    //zmiana współrzędnych bohatera użytkownika
     public void update() {
         if(keyH.upPressed == true) {
             player.y -= player.speed;
@@ -91,6 +98,7 @@ public class GamePanel extends JPanel implements Runnable {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
 
+        tileManager.draw(g2);
         player.draw(g2);
         g2.dispose();
     }

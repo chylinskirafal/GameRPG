@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bb83fb8-0748-43e0-8e00-daf510794bfa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/earth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/grass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/sand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/tree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/wall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/water.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/KeyHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +36,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2iBOGHPazcGIfAnmoCWqDyjIpyW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -38,6 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
@@ -107,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718960409693</updated>
       <workItem from="1718960410770" duration="12489000" />
-      <workItem from="1718973511406" duration="2296000" />
+      <workItem from="1718973511406" duration="4097000" />
     </task>
     <servers />
   </component>
@@ -124,5 +134,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

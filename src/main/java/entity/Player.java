@@ -19,6 +19,7 @@ public class Player extends Entity {
         getPlayerImage();
     }
 
+    //Podstawowe współrzędne gdzie bohater ma się pojawić i z którym zaczytanym assetem
     public void setDefaultValues() {
         x = 350;
         y = 250;
@@ -44,6 +45,7 @@ public class Player extends Entity {
     }
 
     public void update() {
+        //Wychwytywanie co wcisnął użytkownik
         if (keyHandler.upPressed == true || keyHandler.downPressed == true || keyHandler.leftPressed == true || keyHandler.rightPressed == true) {
             if (keyHandler.upPressed == true) {
                 direction = "up";
@@ -59,6 +61,8 @@ public class Player extends Entity {
                 x += speed;
             }
         }
+
+        //sprawdzanie który z dwóch assetów donego kierunku bohatera ma być pokazany
         spriteCounter++;
         if (spriteCounter >= 10) {
             if (spriteNum == 1) {
@@ -70,7 +74,8 @@ public class Player extends Entity {
         }
     }
 
-    public void draw(Graphics g2) {
+    //Rysowanie assetu bohatera
+    public void draw(Graphics2D g2) {
         BufferedImage image = null;
         switch(direction) {
             case "up":
