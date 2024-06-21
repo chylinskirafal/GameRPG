@@ -1,10 +1,16 @@
 package pl.chylu;
 
-import entity.Player;
-import tiles.TileManager;
+import entity.Entity;
+import entity.PlayerCopy;
+import entity.SystemImage;
+import entity.SystemInterface;
+import tiles.TileMap;
+// import tiles.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
 
 public class GamePanel extends JPanel implements Runnable {
     final int originalTileSize = 16; // Modele będą mieć 16x16
@@ -26,12 +32,15 @@ public class GamePanel extends JPanel implements Runnable {
     public final int screenWidth = tileSize * maxScreenCol; // 768 pixel
     public final int screenHeight = tileSize * maxScreenRow; // 576 pixel
 
-    KeyHandler keyH = new KeyHandler();
+    public final KeyHandler keyH = new KeyHandler();
     Thread gameThread;
-    public CollisionChecker collisionChecker = new CollisionChecker(this);
+    // public CollisionChecker collisionChecker = new CollisionChecker(this);
 
-    TileManager tileManager = new TileManager(this);
-    public Player player = new Player(this, keyH);
+
+    public ArrayList<SystemInterface> systems = new ArrayList<SystemInterface>();
+    public ArrayList<Entity> entities = new ArrayList<>();
+
+    public Point2D cameraPosition = new Point2D.Double(0, 0);
 
 
     public GamePanel() {
@@ -40,6 +49,11 @@ public class GamePanel extends JPanel implements Runnable {
         this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
+        
+        this.entities.add(new TileMap(50, 50));
+        this.entities.add(new PlayerCopy(this, keyH));
+
+        this.systems.add(new SystemImage());
     }
 
     public void startGameThread() {
@@ -87,26 +101,28 @@ public class GamePanel extends JPanel implements Runnable {
         }
     }
 
-    //zmiana współrzędnych bohatera użytkownika
     public void update() {
-        if(keyH.upPressed == true) {
-            player.worldY -= player.speed;
-        } else if(keyH.downPressed == true) {
-            player.worldY += player.speed;
-        } else if(keyH.leftPressed == true) {
-            player.worldX -= player.speed;
-        } else if(keyH.rightPressed == true) {
-            player.worldX += player.speed;
+        for (Entity entity : entities) {
+            entity.update(this);
         }
-        player.update();
+
+        for(SystemInterface system : systems) {
+            system.update(this);
+        }
     }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
 
-        tileManager.draw(g2);
-        player.draw(g2);
+        for(Entity entity : entities) {
+            entity.draw(g2, this);
+        }
+
+        for (SystemInterface system : systems) {
+            system.draw(entities, g2, this);
+        }
+
         g2.dispose();
     }
 }

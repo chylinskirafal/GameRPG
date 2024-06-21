@@ -1,5 +1,7 @@
+/*
 package pl.chylu;
 
+import entity.Direction;
 import entity.Entity;
 
 public class CollisionChecker {
@@ -11,10 +13,10 @@ public class CollisionChecker {
 
     //sprawdzania powierzchni kolizji
     public void checkTile(Entity entity) {
-        int entityLeftWorldX = entity.worldX + entity.solidArena.x;
-        int entityRightWorldX = entity.worldX + entity.solidArena.x + entity.solidArena.width;
-        int entityTopWorldY = entity.worldY + entity.solidArena.y;
-        int entityBottomWorldY = entity.worldY + entity.solidArena.y + entity.solidArena.height;
+        int entityLeftWorldX = entity.worldX + entity.solidArea.x;
+        int entityRightWorldX = entity.worldX + entity.solidArea.x + entity.solidArea.width;
+        int entityTopWorldY = entity.worldY + entity.solidArea.y;
+        int entityBottomWorldY = entity.worldY + entity.solidArea.y + entity.solidArea.height;
 
         int entityLeftCol = entityLeftWorldX/gp.tileSize;
         int entityRightCol = entityRightWorldX/gp.tileSize;
@@ -24,7 +26,7 @@ public class CollisionChecker {
         int tileNum1, tileNum2;
 
         switch (entity.direction) {
-            case "up":
+            case Direction.Up:
                 entityTopRow = (entityTopWorldY - entity.speed)/gp.tileSize;
                 tileNum1 = gp.tileManager.mapTileNum[entityLeftCol][entityTopRow];
                 tileNum2 = gp.tileManager.mapTileNum[entityRightCol][entityTopRow];
@@ -32,12 +34,13 @@ public class CollisionChecker {
                     entity.collisionOn = true;
                 }
                 break;
-            case "down":
+            case Direction.Down:
                 break;
-            case "left":
+            case Direction.Left:
                 break;
-            case "right":
+            case Direction.Right:
                 break;
         }
     }
 }
+*/

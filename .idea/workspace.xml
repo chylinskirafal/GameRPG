@@ -5,12 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bb83fb8-0748-43e0-8e00-daf510794bfa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/CollisionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/HasDirection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/HasImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/HasPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/HasSpeed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/PlayerCopy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/SystemInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/CollisionChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/TileMap.java" afterDir="false" />
+    </list>
+    <list id="9c110261-9185-4f38-90e8-3236e562a0a2" name="Changes by pio44" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/SystemImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/TileMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +38,63 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/entity/Entity.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="5" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="5" end1="8" start2="8" end2="13" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="9" end1="11" start2="14" end2="16" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="12" end1="14" start2="17" end2="19" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="15" end1="17" start2="20" end2="22" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="19" end1="19" start2="24" end2="26" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/tiles/TileMap.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="11" end1="13" start2="12" end2="13" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="15" end1="15" start2="15" end2="20" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="16" end1="18" start2="21" end2="30" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="19" end1="21" start2="31" end2="33" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="24" end1="26" start2="36" end2="38" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="27" end1="48" start2="39" end2="45" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="62" end1="63" start2="59" end2="60" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="64" end1="65" start2="61" end2="62" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="70" end1="71" start2="67" end2="68" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="81" end1="82" start2="78" end2="84" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="85" end1="86" start2="87" end2="88" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="90" end1="92" start2="92" end2="94" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="94" end1="101" start2="96" end2="97" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="104" end1="106" start2="100" end2="101" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java">
+      <ranges>
+        <range start1="2" end1="4" start2="2" end2="8" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="7" end1="7" start2="11" end2="13" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="28" end1="29" start2="34" end2="35" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="30" end1="31" start2="36" end2="38" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="32" end1="34" start2="39" end2="43" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="42" end1="42" start2="51" end2="56" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="89" end1="90" start2="103" end2="103" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="91" end1="99" start2="104" end2="106" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="100" end1="101" start2="107" end2="111" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="107" end1="109" start2="117" end2="125" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/tiles/Tile.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="5" end1="7" start2="7" end2="27" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -64,6 +133,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\MusicBot\GameRPG\src\main\res" />
       <recent name="F:\MusicBot\GameRPG\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="entity" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718960409693</updated>
       <workItem from="1718960410770" duration="12489000" />
-      <workItem from="1718973511406" duration="12062000" />
+      <workItem from="1718973511406" duration="20282000" />
     </task>
     <servers />
   </component>
@@ -133,5 +205,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/entity/Entity.java</url>
+          <line>11</line>
+          <properties field="worldX" class="entity.Entity" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
