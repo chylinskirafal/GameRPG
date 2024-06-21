@@ -1,4 +1,4 @@
-package pl.chylu;
+package pl.chylu.coregame;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -14,6 +14,10 @@ public class KeyHandler implements KeyListener {
     public void keyPressed(KeyEvent e) {
         //Rozpoznanie jaki klawisz wcisnął gracz
         int code = e.getKeyCode();
+        if (code == KeyEvent.VK_W && code == KeyEvent.VK_A) {
+            upPressed = true;
+            leftPressed = true;
+        }
         if (code == KeyEvent.VK_W) {
             upPressed = true;
         }

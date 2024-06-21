@@ -1,6 +1,8 @@
-package entity;
+package entity.systems;
 
-import pl.chylu.GamePanel;
+import entity.inferface.HasImage;
+import entity.inferface.SystemInterface;
+import pl.chylu.coregame.GamePanel;
 
 import java.awt.*;
 import java.util.List;
@@ -33,7 +35,7 @@ public class SystemImage implements SystemInterface {
                 var screenX = x + offsetX;
                 var screenY = y + offsetY;
 
-                var halfTile = gp.tileSize / 2;
+                var halfTile = 0;
 
                 g2.drawImage(image, screenX - halfTile, screenY - halfTile, gp.tileSize, gp.tileSize, null);
             }

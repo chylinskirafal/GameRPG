@@ -1,6 +1,7 @@
-package entity;
+package entity.inferface;
 
-import pl.chylu.GamePanel;
+import entity.systems.Entity;
+import pl.chylu.coregame.GamePanel;
 
 import java.awt.*;
 import java.util.List;

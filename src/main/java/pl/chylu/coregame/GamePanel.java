@@ -1,16 +1,16 @@
-package pl.chylu;
+package pl.chylu.coregame;
 
-import entity.Entity;
-import entity.PlayerCopy;
-import entity.SystemImage;
-import entity.SystemInterface;
+import entity.systems.Entity;
+import entity.component.Player;
+import entity.systems.SystemImage;
+import entity.inferface.SystemInterface;
 import tiles.TileMap;
-// import tiles.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class GamePanel extends JPanel implements Runnable {
     final int originalTileSize = 16; // Modele będą mieć 16x16
@@ -18,10 +18,10 @@ public class GamePanel extends JPanel implements Runnable {
     public final int tileSize = originalTileSize * scale; // 48x48 tile
 
     //Ustawienia świata gry
-    public final int maxWorldCol = 50;
-    public final int maxWorldRow = 50;
+    /*public final int maxWorldCol = 10;
+    public final int maxWorldRow = 10;
     public final int worldWidth = maxWorldCol * tileSize;
-    public final int worldHeight = maxWorldRow * tileSize;
+    public final int worldHeight = maxWorldRow * tileSize;*/
 
     //FPS
     final int FPS = 60;
@@ -34,7 +34,6 @@ public class GamePanel extends JPanel implements Runnable {
 
     public final KeyHandler keyH = new KeyHandler();
     Thread gameThread;
-    // public CollisionChecker collisionChecker = new CollisionChecker(this);
 
 
     public ArrayList<SystemInterface> systems = new ArrayList<SystemInterface>();
@@ -49,9 +48,9 @@ public class GamePanel extends JPanel implements Runnable {
         this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
-        
-        this.entities.add(new TileMap(50, 50));
-        this.entities.add(new PlayerCopy(this, keyH));
+
+        this.entities.add(new TileMap(tileSize));
+        this.entities.add(new Player(this, keyH));
 
         this.systems.add(new SystemImage());
     }
@@ -124,5 +123,14 @@ public class GamePanel extends JPanel implements Runnable {
         }
 
         g2.dispose();
+    }
+
+    public <T extends Entity> Optional<T> findEntityByType(Class<T> clazz) {
+        for (Entity entity : entities) {
+            if (clazz.isInstance(entity)) {
+                return Optional.of((T)entity);
+            }
+        }
+        return Optional.empty();
     }
 }

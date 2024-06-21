@@ -5,29 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bb83fb8-0748-43e0-8e00-daf510794bfa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/HasDirection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/HasImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/HasPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/HasSpeed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/PlayerCopy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/SystemInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/inferface/HasCollision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/systems/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/map/map1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/earth — kopia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/grass — kopia.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/systems/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/HasDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/inferface/HasDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/HasImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/inferface/HasImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/HasPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/inferface/HasPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/HasSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/inferface/HasSpeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/PlayerCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/component/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/SystemImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/systems/SystemImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/SystemInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/inferface/SystemInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/CollisionChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/coregame/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/coregame/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/TileMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/TileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/TileMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tiles/grass.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tiles/grass.png" afterDir="false" />
     </list>
     <list id="9c110261-9185-4f38-90e8-3236e562a0a2" name="Changes by pio44" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/SystemImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/TileMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/PlayerCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/component/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/SystemImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/systems/SystemImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/chylu/coregame/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tiles/TileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tiles/TileMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,53 +53,71 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/entity/Entity.java">
+    <file path="$PROJECT_DIR$/src/main/java/entity/component/Player.java">
       <ranges>
-        <range start1="2" end1="2" start2="2" end2="5" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="5" end1="8" start2="8" end2="13" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="9" end1="11" start2="14" end2="16" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="12" end1="14" start2="17" end2="19" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="15" end1="17" start2="20" end2="22" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="19" end1="19" start2="24" end2="26" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="0" end1="1" start2="0" end2="1" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="2" end1="4" start2="2" end2="9" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="10" end1="11" start2="15" end2="16" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="21" end1="22" start2="26" end2="26" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="23" end1="24" start2="27" end2="28" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="29" end1="30" start2="33" end2="34" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="58" end1="59" start2="62" end2="63" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="78" end1="100" start2="82" end2="100" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="185" end1="185" start2="185" end2="189" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/entity/systems/SystemImage.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="2" end1="3" start2="2" end2="5" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="35" end1="36" start2="37" end2="38" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/main/java/tiles/TileMap.java">
       <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="11" end1="13" start2="12" end2="13" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="15" end1="15" start2="15" end2="20" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="16" end1="18" start2="21" end2="30" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="19" end1="21" start2="31" end2="33" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="24" end1="26" start2="36" end2="38" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="27" end1="48" start2="39" end2="45" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="62" end1="63" start2="59" end2="60" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="64" end1="65" start2="61" end2="62" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="70" end1="71" start2="67" end2="68" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="81" end1="82" start2="78" end2="84" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="85" end1="86" start2="87" end2="88" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="90" end1="92" start2="92" end2="94" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="94" end1="101" start2="96" end2="97" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="104" end1="106" start2="100" end2="101" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="2" end1="4" start2="2" end2="5" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="11" end1="11" start2="12" end2="13" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="14" end1="20" start2="16" end2="17" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="21" end1="24" start2="18" end2="19" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="25" end1="30" start2="20" end2="21" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="32" end1="33" start2="23" end2="24" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="34" end1="34" start2="25" end2="27" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="42" end1="43" start2="35" end2="36" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="56" end1="70" start2="49" end2="57" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="84" end1="86" start2="71" end2="73" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="87" end1="89" start2="74" end2="76" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="90" end1="94" start2="77" end2="81" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="98" end1="99" start2="85" end2="86" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="100" end1="103" start2="87" end2="90" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="106" end1="106" start2="93" end2="113" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/main/java/pl/chylu/GamePanel.java">
+    <file path="$PROJECT_DIR$/src/main/java/pl/chylu/coregame/GamePanel.java">
       <ranges>
-        <range start1="2" end1="4" start2="2" end2="8" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="7" end1="7" start2="11" end2="13" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
-        <range start1="28" end1="29" start2="34" end2="35" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="30" end1="31" start2="36" end2="38" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="32" end1="34" start2="39" end2="43" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="42" end1="42" start2="51" end2="56" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="89" end1="90" start2="103" end2="103" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="91" end1="99" start2="104" end2="106" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="100" end1="101" start2="107" end2="111" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="107" end1="109" start2="117" end2="125" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="0" end1="1" start2="0" end2="1" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="2" end1="6" start2="2" end2="6" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="7" end1="8" start2="7" end2="7" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="13" end1="13" start2="12" end2="13" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="20" end1="22" start2="20" end2="22" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="23" end1="24" start2="23" end2="24" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="36" end1="37" start2="36" end2="36" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="51" end1="54" start2="50" end2="53" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="127" end1="127" start2="126" end2="135" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/main/java/tiles/Tile.java">
+    <file path="$PROJECT_DIR$/src/main/java/pl/chylu/CollisionChecker.java">
       <ranges>
-        <range start1="2" end1="2" start2="2" end2="4" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
-        <range start1="5" end1="7" start2="7" end2="27" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="0" end1="1" start2="0" end2="0" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="3" end1="5" start2="2" end2="7" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="7" end1="8" start2="9" end2="11" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="9" end1="11" start2="12" end2="15" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="14" end1="19" start2="18" end2="26" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="20" end1="24" start2="27" end2="34" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="25" end1="26" start2="35" end2="39" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="27" end1="42" start2="40" end2="45" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
+        <range start1="43" end1="43" start2="46" end2="56" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="44" end1="44" start2="57" end2="61" changelist="9c110261-9185-4f38-90e8-3236e562a0a2" />
+        <range start1="45" end1="46" start2="62" end2="62" changelist="5bb83fb8-0748-43e0-8e00-daf510794bfa" />
       </ranges>
     </file>
   </component>
@@ -109,27 +134,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/MusicBot/GameRPG-dd2289c814444bc16dc2d218e3b27fd4fb83412d&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;F:/MusicBot/GameRPG/src/main/java/pl/chylu/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/MusicBot/GameRPG/src/main/resources/map",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "F:/MusicBot/GameRPG/src/main/java/pl/chylu/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\MusicBot\GameRPG\src\main\resources\map" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\MusicBot\GameRPG\src\main\res" />
       <recent name="F:\MusicBot\GameRPG\src\main\java" />
@@ -144,7 +173,7 @@
       <module name="GameRPG" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pl.chylu.*" />
+          <option name="PATTERN" value="pl.chylu.coregame.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,7 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718960409693</updated>
       <workItem from="1718960410770" duration="12489000" />
-      <workItem from="1718973511406" duration="20282000" />
+      <workItem from="1718973511406" duration="29754000" />
     </task>
     <servers />
   </component>
@@ -205,17 +234,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/entity/Entity.java</url>
-          <line>11</line>
-          <properties field="worldX" class="entity.Entity" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,7 @@
 package pl.chylu;
 
+import pl.chylu.coregame.GamePanel;
+
 import javax.swing.*;
 import java.awt.*;
 

@@ -1,4 +1,4 @@
-package entity;
+package entity.inferface;
 
 import java.awt.image.BufferedImage;
 

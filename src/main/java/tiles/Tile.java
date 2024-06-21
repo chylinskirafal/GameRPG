@@ -1,7 +1,5 @@
 package tiles;
 
-import pl.chylu.GamePanel;
-
 import java.awt.image.BufferedImage;
 
 public class Tile {

@@ -1,14 +1,19 @@
-package entity;
+package entity.component;
 
-import pl.chylu.GamePanel;
-import pl.chylu.KeyHandler;
+import entity.inferface.*;
+import entity.systems.Direction;
+import entity.systems.Entity;
+import pl.chylu.CollisionChecker;
+import pl.chylu.coregame.GamePanel;
+import pl.chylu.coregame.KeyHandler;
+import tiles.TileMap;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class PlayerCopy extends Entity implements HasPosition, HasDirection, HasSpeed, HasImage  {
+public class Player extends Entity implements HasPosition, HasDirection, HasSpeed, HasImage, HasCollision {
     GamePanel gp;
     KeyHandler keyHandler;
 
@@ -19,15 +24,14 @@ public class PlayerCopy extends Entity implements HasPosition, HasDirection, Has
     public int spriteCounter = 0;
     public int spriteNum = 1;
     public Rectangle solidArea;
-    public boolean collisionOn = false;
 
-    public PlayerCopy(GamePanel gp, KeyHandler keyH) {
+    public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
         this.keyHandler = keyH;
 
         solidArea = new Rectangle();
         solidArea.x = 8;
-        solidArea.y = 16;
+        solidArea.y = 8;
         solidArea.width = 32;
         solidArea.height = 32;
 
@@ -56,7 +60,7 @@ public class PlayerCopy extends Entity implements HasPosition, HasDirection, Has
             right2 = ImageIO.read(getClass().getResourceAsStream("/player/WalkingSprites/boy_right_2.png"));
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Assets player not loaded");
+            System.out.println("Assets player not laoaded");
         }
     }
 
@@ -76,28 +80,24 @@ public class PlayerCopy extends Entity implements HasPosition, HasDirection, Has
             }
         }
 
-        //Sprawdzanie kolizji z podłożem
-        collisionOn = true;
-        //gp.collisionChecker.checkTile(this);
-
-        //Kolizja fałszywa (false), bohater może się ruszać
-        if(collisionOn == false) {
-            switch (direction) {
-                case Up:
-                    worldY -= speed;
-                    break;
-                case Down:
-                    worldY += speed;
-                    break;
-                case Left:
-                    worldX -= speed;
-                    break;
-                case Right:
-                    worldX += speed;
-                    break;
+        speed = 4;
+            var tileMap = gp.findEntityByType(TileMap.class);
+            if (tileMap.isPresent()) {
+                var collisions = tileMap.get().collisionChecker.checkIfCollides(this);
+                System.out.println(collisions);
+                if(collisions.contains(CollisionChecker.CollisionType.Top) && direction == Direction.Up) {
+                    speed = 0;
+                }
+                if(collisions.contains(CollisionChecker.CollisionType.Bottom) && direction == Direction.Down) {
+                    speed = 0;
+                }
+                if(collisions.contains(CollisionChecker.CollisionType.Left)&& direction == Direction.Left) {
+                    speed = 0;
+                }
+                if(collisions.contains(CollisionChecker.CollisionType.Right) && direction == Direction.Right) {
+                    speed = 0;
+                }
             }
-
-        }
 
         if(keyH.upPressed == true) {
             worldY -= speed;
@@ -181,6 +181,10 @@ public class PlayerCopy extends Entity implements HasPosition, HasDirection, Has
     @Override
     public int getY() {
         return worldY;
+    }
+
+    public Rectangle getSolidArea() {
+        return solidArea;
     }
 
 }

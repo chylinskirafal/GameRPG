@@ -1,4 +1,4 @@
-package entity;
+package entity.inferface;
 
 public interface HasPosition {
     public int getX();
