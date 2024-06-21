@@ -23,6 +23,12 @@ public class Player extends Entity {
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
         screenY = gp.screenHeight/2 - (gp.tileSize/2);
 
+        solidArena = new Rectangle();
+        solidArena.x = 8;
+        solidArena.y = 16;
+        solidArena.width = 32;
+        solidArena.height = 32;
+
         setDefaultValues();
         getPlayerImage();
     }
@@ -57,20 +63,39 @@ public class Player extends Entity {
         if (keyHandler.upPressed == true || keyHandler.downPressed == true || keyHandler.leftPressed == true || keyHandler.rightPressed == true) {
             if (keyHandler.upPressed == true) {
                 direction = "up";
-                worldY -= speed;
             } else if (keyHandler.downPressed == true) {
                 direction = "down";
-                worldY += speed;
             } else if (keyHandler.leftPressed == true) {
                 direction = "left";
-                worldX -= speed;
             } else if (keyHandler.rightPressed == true) {
                 direction = "right";
-                worldX += speed;
             }
         }
 
-        //sprawdzanie który z dwóch assetów donego kierunku bohatera ma być pokazany
+        //Sprawdzanie kolizji z podłożem
+        collisionOn = true;
+        gp.collisionChecker.checkTile(this);
+
+        //Kolizja fałszywa (false), bohater może się ruszać
+        if(collisionOn == false) {
+            switch (direction) {
+                case "up":
+                    worldY -= speed;
+                    break;
+                case "down":
+                    worldY += speed;
+                    break;
+                case "left":
+                    worldX -= speed;
+                    break;
+                case "right":
+                    worldX += speed;
+                    break;
+            }
+        }
+
+
+        //Sprawdzanie który z dwóch assetów donego kierunku bohatera ma być pokazany
         spriteCounter++;
         if (spriteCounter >= 10) {
             if (spriteNum == 1) {
