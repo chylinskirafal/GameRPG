@@ -10,11 +10,11 @@ import java.io.IOException;
 
 public class Player extends Entity {
     GamePanel gp;
-    KeyHandler keyH;
+    KeyHandler keyHandler;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
-        this.keyH = keyH;
+        this.keyHandler = keyH;
         setDefaultValues();
         getPlayerImage();
     }
@@ -28,7 +28,6 @@ public class Player extends Entity {
 
     //pobieranie assetów grafik
     public void getPlayerImage() {
-
         try {
             up1 = ImageIO.read(getClass().getResourceAsStream("/player/WalkingSprites/boy_up_1.png"));
             up2 = ImageIO.read(getClass().getResourceAsStream("/player/WalkingSprites/boy_up_2.png"));
@@ -38,7 +37,6 @@ public class Player extends Entity {
             left2 = ImageIO.read(getClass().getResourceAsStream("/player/WalkingSprites/boy_left_2.png"));
             right1 = ImageIO.read(getClass().getResourceAsStream("/player/WalkingSprites/boy_right_1.png"));
             right2 = ImageIO.read(getClass().getResourceAsStream("/player/WalkingSprites/boy_right_2.png"));
-
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Assets player not loaded");
@@ -46,18 +44,20 @@ public class Player extends Entity {
     }
 
     public void update() {
-        if(keyH.upPressed == true) {
-            direction = "up";
-            y -= speed;
-        } else if(keyH.downPressed == true) {
-            direction = "down";
-            y += speed;
-        } else if(keyH.leftPressed == true) {
-            direction = "left";
-            x -= speed;
-        } else if(keyH.rightPressed == true) {
-            direction = "right";
-            x += speed;
+        if (keyHandler.upPressed == true || keyHandler.downPressed == true || keyHandler.leftPressed == true || keyHandler.rightPressed == true) {
+            if (keyHandler.upPressed == true) {
+                direction = "up";
+                y -= speed;
+            } else if (keyHandler.downPressed == true) {
+                direction = "down";
+                y += speed;
+            } else if (keyHandler.leftPressed == true) {
+                direction = "left";
+                x -= speed;
+            } else if (keyHandler.rightPressed == true) {
+                direction = "right";
+                x += speed;
+            }
         }
         spriteCounter++;
         if (spriteCounter >= 10) {
@@ -71,7 +71,6 @@ public class Player extends Entity {
     }
 
     public void draw(Graphics g2) {
-
         BufferedImage image = null;
         switch(direction) {
             case "up":
