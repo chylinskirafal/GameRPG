@@ -1,7 +1,7 @@
 package tiles;
 
 import entity.systems.Entity;
-import pl.chylu.CollisionChecker;
+import entity.systems.TileCollidesChecker;
 import pl.chylu.coregame.GamePanel;
 
 import javax.imageio.ImageIO;
@@ -16,15 +16,14 @@ public class TileMap extends Entity {
     public Tile[] tile;
     public ArrayList<ArrayList<Integer>> map;
 
-    public final CollisionChecker collisionChecker;
+    public final TileCollidesChecker collisionChecker;
 
     public TileMap(int tileSize) {
         tile = new Tile[10];
         createTiles();
-        //loadMap("/map/map1.txt");
         loadMap("/map/world01.txt");
-        System.out.println(this.toString());
-        this.collisionChecker = new CollisionChecker(tileSize, this);
+        //System.out.println(this.toString());
+        this.collisionChecker = new TileCollidesChecker(tileSize, this);
     }
 
     // Ładowanie grafik tła
@@ -77,8 +76,8 @@ public class TileMap extends Entity {
 
             int worldX = x * gp.tileSize;
             int worldY = y * gp.tileSize;
-            int screenX = worldX - (int)gp.cameraPosition.getX() + (gp.screenWidth/2);// + (int)(gp.tileSize*13.5);
-            int screenY = worldY - (int)gp.cameraPosition.getY() + (gp.screenHeight/2);// - (int)(gp.tileSize*2.5);
+            int screenX = worldX - (int)gp.cameraPosition.getX() + (gp.screenWidth/2);
+            int screenY = worldY - (int)gp.cameraPosition.getY() + (gp.screenHeight/2);
 
 
             g2.drawImage(tile[tileNum].getImage(), screenX, screenY, gp.tileSize, gp.tileSize, null);

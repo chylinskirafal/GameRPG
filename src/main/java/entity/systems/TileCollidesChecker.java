@@ -1,16 +1,15 @@
-package pl.chylu;
+package entity.systems;
 
 import entity.inferface.HasCollision;
 import tiles.TileMap;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
-public class CollisionChecker {
+public class TileCollidesChecker extends Collides{
     private final int tileSize;
     private final TileMap tileMap;
 
-    public CollisionChecker(int tileSize, TileMap tileMap) {
+    public TileCollidesChecker(int tileSize, TileMap tileMap) {
         this.tileSize = tileSize;
         this.tileMap = tileMap;
     }
@@ -20,7 +19,7 @@ public class CollisionChecker {
         int worldPosTop = entity.getY() + entity.getSolidArea().y;
         int worldPosRight = entity.getX() + entity.getSolidArea().x + entity.getSolidArea().width;
         int worldPosBottom = entity.getY() + entity.getSolidArea().y+ entity.getSolidArea().height;
-        int worldPosLeft = entity.getX() + + entity.getSolidArea().x;
+        int worldPosLeft = entity.getX() + entity.getSolidArea().x;
 
         int worldPosCenterX = entity.getX() + entity.getSolidArea().x + entity.getSolidArea().width / 2;
         int worldPosCenterY = entity.getY() + entity.getSolidArea().y + entity.getSolidArea().height / 2;
@@ -56,7 +55,4 @@ public class CollisionChecker {
         return collisions;
     }
 
-    public static enum CollisionType {
-        Top, Left, Bottom, Right;
-    }
 }

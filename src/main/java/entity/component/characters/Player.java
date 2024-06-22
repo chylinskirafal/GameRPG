@@ -1,9 +1,9 @@
-package entity.component;
+package entity.component.characters;
 
 import entity.inferface.*;
 import entity.systems.Direction;
 import entity.systems.Entity;
-import pl.chylu.CollisionChecker;
+import entity.systems.TileCollidesChecker;
 import pl.chylu.coregame.GamePanel;
 import pl.chylu.coregame.KeyHandler;
 import tiles.TileMap;
@@ -29,6 +29,7 @@ public class Player extends Entity implements HasPosition, HasDirection, HasSpee
         this.gp = gp;
         this.keyHandler = keyH;
 
+        //obszar kolizji postaci
         solidArea = new Rectangle();
         solidArea.x = 8;
         solidArea.y = 8;
@@ -81,24 +82,27 @@ public class Player extends Entity implements HasPosition, HasDirection, HasSpee
         }
 
         speed = 4;
-            var tileMap = gp.findEntityByType(TileMap.class);
-            if (tileMap.isPresent()) {
-                var collisions = tileMap.get().collisionChecker.checkIfCollides(this);
-                System.out.println(collisions);
-                if(collisions.contains(CollisionChecker.CollisionType.Top) && direction == Direction.Up) {
-                    speed = 0;
-                }
-                if(collisions.contains(CollisionChecker.CollisionType.Bottom) && direction == Direction.Down) {
-                    speed = 0;
-                }
-                if(collisions.contains(CollisionChecker.CollisionType.Left)&& direction == Direction.Left) {
-                    speed = 0;
-                }
-                if(collisions.contains(CollisionChecker.CollisionType.Right) && direction == Direction.Right) {
-                    speed = 0;
-                }
-            }
 
+        //sprawdzanie kolizji przy ruchu
+        var tileMap = gp.findEntityByType(TileMap.class);
+        if (tileMap.isPresent()) {
+            var collisions = tileMap.get().collisionChecker.checkIfCollides(this);
+            //System.out.println(collisions);
+            if(collisions.contains(TileCollidesChecker.CollisionType.Top) && direction == Direction.Up) {
+                speed = 0;
+            }
+            if(collisions.contains(TileCollidesChecker.CollisionType.Bottom) && direction == Direction.Down) {
+                speed = 0;
+            }
+            if(collisions.contains(TileCollidesChecker.CollisionType.Left)&& direction == Direction.Left) {
+                speed = 0;
+            }
+            if(collisions.contains(TileCollidesChecker.CollisionType.Right) && direction == Direction.Right) {
+                speed = 0;
+            }
+        }
+
+        //wykonanie ruchu, jeżeli nie nastąpiła kolizja
         if(keyH.upPressed == true) {
             worldY -= speed;
         } else if(keyH.downPressed == true) {
@@ -128,6 +132,7 @@ public class Player extends Entity implements HasPosition, HasDirection, HasSpee
 
     }
 
+    //Wybranie grafiki do ruchu zgodnie z wcześniejszym algorytmem
     @Override
     public BufferedImage getImage(int animationIndex) {
         switch(direction) {

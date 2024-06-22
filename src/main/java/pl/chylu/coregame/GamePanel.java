@@ -1,7 +1,9 @@
 package pl.chylu.coregame;
 
+import entity.component.objects.AssetSetter;
+import entity.component.objects.SuperObject;
 import entity.systems.Entity;
-import entity.component.Player;
+import entity.component.characters.Player;
 import entity.systems.SystemImage;
 import entity.inferface.SystemInterface;
 import tiles.TileMap;
@@ -13,45 +15,51 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 public class GamePanel extends JPanel implements Runnable {
+    //Ustawienie wymiaru "pikseli" - kratek w grze
     final int originalTileSize = 16; // Modele będą mieć 16x16
     final int scale = 3;
     public final int tileSize = originalTileSize * scale; // 48x48 tile
 
-    //Ustawienia świata gry
-    /*public final int maxWorldCol = 10;
-    public final int maxWorldRow = 10;
-    public final int worldWidth = maxWorldCol * tileSize;
-    public final int worldHeight = maxWorldRow * tileSize;*/
-
     //FPS
     final int FPS = 60;
 
-    //rozmiar ilości "pikseli"
+    //rozmiar ilości "pikseli" - kratek
     public final int maxScreenCol = 16;
     public final int maxScreenRow = 12;
     public final int screenWidth = tileSize * maxScreenCol; // 768 pixel
     public final int screenHeight = tileSize * maxScreenRow; // 576 pixel
 
+    //Obsługa wątku i kontrolera (klawiatury)
     public final KeyHandler keyH = new KeyHandler();
     Thread gameThread;
 
-
+    //Listy krytycznych funkcji / kamery / struktur blokowych świata
     public ArrayList<SystemInterface> systems = new ArrayList<SystemInterface>();
     public ArrayList<Entity> entities = new ArrayList<>();
-
     public Point2D cameraPosition = new Point2D.Double(0, 0);
+
+    //Obiekty w programie
+    public ArrayList<SuperObject> objects = new ArrayList<>();
+    public AssetSetter assetSetter = new AssetSetter(this);
+
+    public void setupGame() {
+        assetSetter.setObject();
+    }
 
 
     public GamePanel() {
+        //ustawienia okna gry
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
 
+        //ładowanie mapy oraz bohatera gry
         this.entities.add(new TileMap(tileSize));
         this.entities.add(new Player(this, keyH));
 
+        //rysowanie powyższego w oknie
         this.systems.add(new SystemImage());
     }
 
@@ -100,6 +108,7 @@ public class GamePanel extends JPanel implements Runnable {
         }
     }
 
+    //aktualizacja tego co jest na mapie
     public void update() {
         for (Entity entity : entities) {
             entity.update(this);
@@ -125,9 +134,10 @@ public class GamePanel extends JPanel implements Runnable {
         g2.dispose();
     }
 
-    public <T extends Entity> Optional<T> findEntityByType(Class<T> clazz) {
+    //Znalenienie konkretnego Entity
+    public <T extends Entity> Optional<T> findEntityByType(Class<T> classEntity) {
         for (Entity entity : entities) {
-            if (clazz.isInstance(entity)) {
+            if (classEntity.isInstance(entity)) {
                 return Optional.of((T)entity);
             }
         }
